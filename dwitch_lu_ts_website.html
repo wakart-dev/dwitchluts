@@ -1,0 +1,151 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>DwitchLUTs — Film & Color Grading Packs</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&display=swap" rel="stylesheet">
+  <style>
+    :root{
+      --bg:#050507; --card:#0c0c10; --muted:rgba(255,255,255,0.55); --accent:#e7b94b; --glass:rgba(255,255,255,0.04);
+      --max:1200px; --radius:14px;
+    }
+    *{box-sizing:border-box}
+    html,body{height:100%}
+    body{margin:0;font-family:Inter,system-ui,Segoe UI,Roboto,Arial;color:#fff;background:linear-gradient(180deg,#030305 0%, #0b0b0f 100%);-webkit-font-smoothing:antialiased}
+    .wrap{max-width:var(--max);margin:0 auto;padding:28px}
+    header.site-header{display:flex;align-items:center;justify-content:space-between;padding:18px 0}
+    .brand{font-weight:800;letter-spacing:0.6px;font-size:20px}
+    nav ul{display:flex;gap:18px;align-items:center;margin:0;padding:0;list-style:none}
+    nav a{color:var(--muted);text-decoration:none;font-weight:600}
+    .cta{background:var(--accent);color:#0b0b0d;padding:8px 12px;border-radius:10px;font-weight:700}
+    .hero{display:grid;grid-template-columns:1fr 420px;gap:36px;align-items:center;padding:40px 0}
+    .hero-left h1{font-size:48px;margin:0 0 10px;line-height:1.02}
+    .hero-left p{color:var(--muted);margin:0 0 18px;font-size:16px}
+    .hero-actions{display:flex;gap:12px}
+    .btn{background:transparent;border:1px solid var(--glass);padding:10px 14px;border-radius:10px;cursor:pointer;color:var(--muted)}
+    .btn.primary{background:var(--accent);border:none;color:#070707;font-weight:700}
+    .hero-right{background:linear-gradient(180deg, rgba(255,255,255,0.02), transparent);border-radius:12px;padding:16px}
+    .preview{height:300px;border-radius:10px;background-image:linear-gradient(135deg, rgba(0,0,0,0.3), rgba(255,255,255,0.02));display:flex;align-items:flex-end;padding:16px}
+    .preview small{opacity:.9}
+    .grid{display:grid;gap:18px}
+    .products{grid-template-columns:repeat(3,1fr);display:grid;margin-top:24px}
+    .card{background:var(--card);padding:16px;border-radius:12px;border:1px solid var(--glass)}
+    .card h4{margin:0 0 8px}
+    .card p{margin:0;color:var(--muted);font-size:14px}
+    .price-row{display:flex;justify-content:space-between;align-items:center;margin-top:12px}
+    .showreel{display:flex;gap:12px;margin-top:26px}
+    .video-thumb{flex:1;min-height:180px;border-radius:12px;background:#0a0a0d;display:flex;align-items:center;justify-content:center;color:var(--muted);font-weight:600}
+    footer{border-top:1px solid rgba(255,255,255,0.03);margin-top:40px;padding:22px 0;color:var(--muted);display:flex;justify-content:space-between;align-items:center}
+    @media (max-width:980px){.hero{grid-template-columns:1fr;}.products{grid-template-columns:repeat(2,1fr)}}
+    @media (max-width:600px){.products{grid-template-columns:1fr}.hero-left h1{font-size:34px}}
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <header class="site-header">
+      <div class="brand">Dwitch<span style="color:var(--accent)">LUTs</span></div>
+      <nav>
+        <ul>
+          <li><a href="#products">Packs</a></li>
+          <li><a href="#showreel">Showreel</a></li>
+          <li><a href="#about">About</a></li>
+          <li><a class="cta" href="#contact">Contact</a></li>
+        </ul>
+      </nav>
+    </header>
+    <main>
+      <section class="hero">
+        <div class="hero-left">
+          <h1>Film-inspired LUTs for cinematic color grading</h1>
+          <p>Quick .cube packs designed for filmmakers and creators — clean previews, instant ZIP downloads, and licence management coming soon.</p>
+          <div class="hero-actions">
+            <button class="btn primary" onclick="document.getElementById('products').scrollIntoView({behavior:'smooth'})">Shop LUT Packs</button>
+            <button class="btn" onclick="document.getElementById('showreel').scrollIntoView({behavior:'smooth'})">Watch Showreel</button>
+          </div>
+        </div>
+        <aside class="hero-right">
+          <div class="preview">
+            <div style="flex:1">
+              <small>Preview — Travel Clean Pack</small>
+              <div style="height:12px"></div>
+              <div style="width:100%;height:8px;background:linear-gradient(90deg,var(--accent),transparent);border-radius:6px"></div>
+            </div>
+          </div>
+          <div style="display:flex;gap:8px;margin-top:12px">
+            <div style="flex:1;text-align:center;padding:10px;border-radius:8px;background:rgba(255,255,255,0.02)">3 LUTs<br><small style="color:var(--muted)">zip</small></div>
+            <div style="flex:1;text-align:center;padding:10px;border-radius:8px;background:rgba(255,255,255,0.02)">7 USD<br><small style="color:var(--muted)">one-time</small></div>
+          </div>
+        </aside>
+      </section>
+      <section id="products" class="products grid">
+        <article class="card">
+          <h4>Cinematic Gold Pack</h4>
+          <p>Warm filmic tones — perfect for narrative and portrait work.</p>
+          <div class="price-row">
+            <strong>$12.00</strong>
+            <button class="btn" onclick="addToCart('l01')">Add to cart</button>
+          </div>
+        </article>
+        <article class="card">
+          <h4>Moody Urban Pack</h4>
+          <p>Deep shadows with teal highlights — great for music videos.</p>
+          <div class="price-row">
+            <strong>$9.00</strong>
+            <button class="btn" onclick="addToCart('l02')">Add to cart</button>
+          </div>
+        </article>
+        <article class="card">
+          <h4>Travel Clean Pack</h4>
+          <p>Bright and punchy LUTs made for travel and vlogs.</p>
+          <div class="price-row">
+            <strong>$7.00</strong>
+            <button class="btn" onclick="addToCart('l03')">Add to cart</button>
+          </div>
+        </article>
+      </section>
+      <section id="showreel" class="showreel">
+        <div class="video-thumb">Showreel 1 — Click to play</div>
+        <div class="video-thumb">Showreel 2 — Click to play</div>
+        <div class="video-thumb">Showreel 3 — Click to play</div>
+      </section>
+      <section id="about" style="margin-top:26px;display:flex;gap:18px;align-items:center">
+        <div style="flex:2">
+          <h3 style="margin:0 0 8px">About DwitchLUTs</h3>
+          <p style="margin:0;color:var(--muted)">I create handcrafted LUT packs for filmmakers who want cinematic color with minimal fuss. Each pack includes .cube files and sample footage for preview.</p>
+        </div>
+        <div style="flex:1;text-align:right">
+          <small style="color:var(--muted)">Based in Nairobi • Deliver worldwide</small>
+        </div>
+      </section>
+      <section id="contact" style="margin-top:28px;padding:16px;border-radius:12px;background:linear-gradient(180deg, rgba(255,255,255,0.02), transparent);">
+        <h4 style="margin:0 0 8px">Get in touch</h4>
+        <p style="margin:0 0 12px;color:var(--muted)">Questions, custom LUT requests, or collabs — drop a message.</p>
+        <form onsubmit="event.preventDefault(); alert('Demo: message sent — I can wire this to email/WhatsApp next.')">
+          <div style="display:flex;gap:8px;flex-wrap:wrap">
+            <input required placeholder="Your name" style="flex:1;padding:10px;border-radius:8px;border:1px solid var(--glass);background:transparent;color:#fff" />
+            <input required placeholder="Email" style="flex:1;padding:10px;border-radius:8px;border:1px solid var(--glass);background:transparent;color:#fff" />
+          </div>
+          <textarea required placeholder="Message" style="width:100%;margin-top:10px;padding:10px;border-radius:8px;border:1px solid var(--glass);background:transparent;color:#fff" rows="4"></textarea>
+          <div style="margin-top:10px;text-align:right">
+            <button class="btn primary">Send message</button>
+          </div>
+        </form>
+      </section>
+    </main>
+    <footer>
+      <div>&copy; <strong>DwitchLUTs</strong> — handcrafted LUT packs</div>
+      <div style="color:var(--muted)">Made with ⚡ for filmmakers</div>
+    </footer>
+  </div>
+  <script>
+    const products = {
+      l01: {id:'l01',title:'Cinematic Gold Pack',price:12.00},
+      l02: {id:'l02',title:'Moody Urban Pack',price:9.00},
+      l03: {id:'l03',title:'Travel Clean Pack',price:7.00}
+    };
+    let cart = [];
+    function addToCart(id){ cart.push(products[id]); alert(products[id].title + ' added to cart — demo mode.'); }
+  </script>
+</body>
+</html>
